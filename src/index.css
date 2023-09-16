@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-5xl;
+  }
+
+  h2 {
+    @apply text-4xl;
+  }
+
+  h3 {
+    @apply text-3xl;
+  }
+
+  h4 {
+    @apply text-2xl;
+  }
+
+  h5 {
+    @apply text-xl;
+    @apply font-['Barlow_Condensed'];
+    @apply tracking-[4.72px]
+  }
+
+  p {
+    @apply text-base;
+    @apply leading-[32px];
+    @apply font-['Barlow']
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-['Bellefair']
+  }
+
+  a {
+    @apply font-['Barlow_Condensed'];
+    @apply text-sm;
+    @apply tracking-[2.70px]
+  }
+
+  /* ... */
+}
