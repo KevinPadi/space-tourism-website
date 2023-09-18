@@ -12,7 +12,7 @@ function Nav () {
           </g>
         </svg>
       </div>
-      <div className='hidden md:block flex-1 relative h-full'>
+      <div className='hidden lg:block flex-1 relative h-full'>
         <div className='absolute top-1/2 -right-[30px] w-full z-20 h-[1px] bg-white/25 max-w-[473px]' />
       </div>
       <div className='w-[450px] lg:w-[700px] xl:w-[830px] h-full bg-[#ffffff0a] backdrop-blur-[40px] hidden md:flex items-center justify-center'>
