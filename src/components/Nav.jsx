@@ -3,7 +3,7 @@ import HamburgerMenu from './HamburguerMenu'
 
 function Nav () {
   return (
-    <header className='relative h-[96px] text-white lg:mt-[40px] ml-[39px] mr-[26px] md:mr-0 lg:ml-[55px] flex justify-between items-center'>
+    <header className=' h-[96px] text-white ml-[39px] mr-[26px] md:mr-0 lg:ml-[55px] flex justify-between items-center'>
       <div className=' w-[48px] h-[48px] '>
         <svg xmlns='http://www.w3.org/2000/svg' width='48' height='48'>
           <g fill='none' fillRule='evenodd'>
