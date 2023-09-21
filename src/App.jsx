@@ -1,10 +1,11 @@
 import Nav from './components/Nav'
+import HomePage from './pages/HomePage'
 
 function App () {
   return (
-    <div className='w-screen h-screen bg-bgHomeMobile sm:bg-bgHomeTablet lg:bg-bgHomeDesktop bg-no-repeat bg-cover lg:pt-[40px]'>
+    <div className='min-h-screen bg-fixed bg-cover'>
       <Nav />
-
+      <HomePage />
     </div>
 
   )
