@@ -36,6 +36,9 @@ export default {
         bgTechDesktop: "url('/src/assets/technology/background-technology-desktop.jpg')",
         bgTechTablet: "url('/src/assets/technology/background-technology-tablet.jpg')",
         bgTechMobile: "url('/src/assets/technology/background-technology-mobile.jpg')"
+      },
+      screens: {
+        '2xl': '1440px'
       }
     }
   },
