@@ -3,11 +3,11 @@ import React from 'react'
 function HomePage () {
   return (
     <main>
-      <div className='w-[327px] md:w-[450px] lg:w-full h-full mx-auto lg:px-[105px] text-center flex flex-col lg:flex-row justify-around lg:justify-between lg:items-end pb-8 pt-10 md:pt-40 xl:pt-[187px] 2xl:pt-[387px] gap-10'>
+      <div className='w-[327px] md:w-[450px] lg:w-full h-full mx-auto lg:px-[105px] xl:px-[165px] text-center flex flex-col lg:flex-row justify-around lg:justify-between lg:items-end pb-8 pt-10 md:pt-40 xl:pt-[187px] 2xl:pt-[387px] gap-10'>
         <div className='space-x-[16px] lg:space-x-[24px] space-y-3 text-center lg:text-left lg:w-[445px] '>
           <p className='pl-5 text-skyBlue font-["Barlow_Condensed"] text-sm md:text-[20px] lg:text-xl tracking-[2.70px] lg:tracking-[4.72px] uppercase'>So, you want to travel to</p>
           <h1 className='text-skyBlue text-[80px] text-center md:text-5xl uppercase'>Space</h1>
-          <p className='text-[15px] md:text-[16px]  lg:text-base font-["Barlow"] text-skyBlue'>
+          <p className='text-[15px] md:text-[16px] lg:text-base font-["Barlow"] text-skyBlue'>
             Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
           </p>
         </div>
