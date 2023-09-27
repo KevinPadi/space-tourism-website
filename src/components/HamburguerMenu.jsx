@@ -8,7 +8,7 @@ function HamburgerMenu () {
   }
 
   return (
-    <div className='px-8 md:hidden'>
+    <div className='px-8 md:hidden z-50'>
       <div className='flex items-center justify-between'>
         <div className='flex items-center justify-between'>
           <input type='checkbox' name='hamburger' id='hamburger' className='peer' hidden />
