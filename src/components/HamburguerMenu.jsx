@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'wouter'
 
 function HamburgerMenu () {
   const [modalOpen, setModalOpen] = useState(false)
@@ -21,15 +22,21 @@ function HamburgerMenu () {
           <div className='peer-checked:translate-x-0 translate-x-full transition duration-300 fixed inset-0 flex justify-end'>
             <div className='w-[calc(254px)] bg-[#ffffff0a] backdrop-blur-[40px]'>
               <div className='flex flex-col items-left gap-5 pt-[100px] pl-[32px] ml-auto'>
-                <a href='#' className='uppercase w-full flex items-center gap-[11px] border-r-4 border-white active:border-white hover:border-white/50 transition-all ease-in-out'>
-                  <span className='font-bold'>00</span> Home
-                </a>
-                <a href='#' className='uppercase w-full flex items-center gap-[11px] transition-all ease-in-out'>
-                  <span className='font-bold'>01</span> Destination
-                </a>
-                <a href='#' className='uppercase w-full flex items-center gap-[11px] transition-all ease-in-out'>
-                  <span className='font-bold'>02</span> Crew
-                </a>
+                <Link href='/'>
+                  <a href='#' className='uppercase w-full flex items-center gap-[11px] border-r-4 border-white active:border-white hover:border-white/50 transition-all ease-in-out'>
+                    <span className='font-bold'>00</span> Home
+                  </a>
+                </Link>
+                <Link href='/destination'>
+                  <a href='#' className='uppercase w-full flex items-center gap-[11px] transition-all ease-in-out'>
+                    <span className='font-bold'>01</span> Destination
+                  </a>
+                </Link>
+                <Link href='/crew'>
+                  <a href='#' className='uppercase w-full flex items-center gap-[11px] transition-all ease-in-out'>
+                    <span className='font-bold'>02</span> Crew
+                  </a>
+                </Link>
                 <a href='#' className='uppercase w-full flex items-center gap-[11px] transition-all ease-in-out'>
                   <span className='font-bold'>03</span> Technology
                 </a>
