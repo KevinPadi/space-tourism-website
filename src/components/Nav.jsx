@@ -1,6 +1,18 @@
 import React from 'react'
 import HamburgerMenu from './HamburguerMenu'
-import { Link } from 'wouter'
+import { Link, useRoute } from 'wouter'
+
+function NavLink ({ to, children }) {
+  const [isActive] = useRoute(to)
+
+  return (
+    <Link href={to}>
+      <a className={`uppercase h-full flex items-center gap-[11px] ${isActive ? 'border-b-4 border-white transition-all duration-300' : 'border-transparent'} border-b-4 hover:border-white/50 hover:border-b-4 transition-all ease-in-out`}>
+        {children}
+      </a>
+    </Link>
+  )
+}
 
 function Nav () {
   return (
@@ -17,27 +29,21 @@ function Nav () {
         <div className='absolute top-1/2 -right-[30px] w-full z-20 h-[1px] bg-white/25 max-w-[473px]' />
       </div>
       <div className='w-[450px] lg:w-[700px] xl:w-[830px] h-full bg-[#ffffff0a] backdrop-blur-[40px] hidden md:flex items-center justify-center'>
-        <nav className='flex gap-6 lg:gap-[48px] h-full align-middle'>
-          <Link href='/'>
-            <a href='../pages/HomePage' className='uppercase h-full flex items-center gap-[11px] border-b-4 border-white active:border-white hover:border-white/50 transition-all ease-in-out'>
-              <span className='font-bold hidden lg:block'>00</span> Home
-            </a>
-          </Link>
-          <Link href='/destination'>
-            <a className='uppercase h-full flex items-center gap-[11px] border-b-4 border-white active:border-white hover:border-white/50 transition-all ease-in-out'>
-              <span className='font-bold hidden lg:block'>01</span> Destination
-            </a>
-          </Link>
-          <Link href='/crew'>
-            <a className='uppercase h-full flex items-center gap-[11px] border-b-4 border-white active:border-white hover:border-white/50 transition-all ease-in-out'>
-              <span className='font-bold hidden lg:block'>02</span> Crew
-            </a>
-          </Link>
-          <Link href='/technology'>
-            <a className='uppercase h-full flex items-center gap-[11px] border-b-4 border-white active:border-white hover:border-white/50 transition-all ease-in-out'>
-              <span className='font-bold hidden lg:block'>03</span> Technology
-            </a>
-          </Link>
+        <nav className='h-full'>
+          <ul className='flex gap-6 lg:gap-[48px] h-full align-middle'>
+            <li className='hover:bg-red'>
+              <NavLink to='/'><span className='font-bold hidden lg:block'>00</span>Home</NavLink>
+            </li>
+            <li>
+              <NavLink to='/destination'><span className='font-bold hidden lg:block'>01</span>Destination</NavLink>
+            </li>
+            <li>
+              <NavLink to='/crew'><span className='font-bold hidden lg:block'>02</span>Crew</NavLink>
+            </li>
+            <li>
+              <NavLink to='/technology'><span className='font-bold hidden lg:block'>03</span>Technology</NavLink>
+            </li>
+          </ul>
         </nav>
       </div>
       <HamburgerMenu />
