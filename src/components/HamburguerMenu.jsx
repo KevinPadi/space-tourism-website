@@ -1,5 +1,17 @@
 import { useState } from 'react'
-import { Link } from 'wouter'
+import { Link, useRoute } from 'wouter'
+
+function NavLink ({ to, children }) {
+  const [isActive] = useRoute(to)
+
+  return (
+    <Link href={to}>
+      <a className={`uppercase w-full flex items-center gap-[11px] border-r-4 ${isActive ? 'border-r-4 border-white transition-all duration-300' : 'border-transparent'} transition-all ease-in-out`}>
+        {children}
+      </a>
+    </Link>
+  )
+}
 
 function HamburgerMenu () {
   const [modalOpen, setModalOpen] = useState(false)
@@ -22,26 +34,10 @@ function HamburgerMenu () {
           <div className='peer-checked:translate-x-0 translate-x-full transition duration-300 fixed inset-0 flex justify-end'>
             <div className='w-[calc(254px)] bg-[#ffffff0a] backdrop-blur-[40px]'>
               <div className='flex flex-col items-left gap-5 pt-[100px] pl-[32px] ml-auto'>
-                <Link href='/'>
-                  <a className='uppercase w-full flex items-center gap-[11px] border-r-4 border-white active:border-white hover:border-white/50 transition-all ease-in-out'>
-                    <span className='font-bold'>00</span> Home
-                  </a>
-                </Link>
-                <Link href='/destination'>
-                  <a className='uppercase w-full flex items-center gap-[11px] transition-all ease-in-out'>
-                    <span className='font-bold'>01</span> Destination
-                  </a>
-                </Link>
-                <Link href='/crew'>
-                  <a className='uppercase w-full flex items-center gap-[11px] transition-all ease-in-out'>
-                    <span className='font-bold'>02</span> Crew
-                  </a>
-                </Link>
-                <Link href='/technology'>
-                  <a className='uppercase w-full flex items-center gap-[11px] transition-all ease-in-out'>
-                    <span className='font-bold'>03</span> Technology
-                  </a>
-                </Link>
+                <NavLink to='/'><span className='font-bold'>00</span> Home</NavLink>
+                <NavLink to='/destination'><span className='font-bold'>01</span> Destination</NavLink>
+                <NavLink to='/crew'><span className='font-bold'>02</span> Crew</NavLink>
+                <NavLink to='/technology'><span className='font-bold'>03</span> Technology</NavLink>
               </div>
 
             </div>
