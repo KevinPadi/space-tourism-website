@@ -33,9 +33,11 @@ function Nav () {
               <span className='font-bold hidden lg:block'>02</span> Crew
             </a>
           </Link>
-          <a href='#' className='uppercase h-full flex items-center gap-[11px] border-b-4 border-white active:border-white hover:border-white/50 transition-all ease-in-out'>
-            <span className='font-bold hidden lg:block'>03</span> Technology
-          </a>
+          <Link href='/technology'>
+            <a className='uppercase h-full flex items-center gap-[11px] border-b-4 border-white active:border-white hover:border-white/50 transition-all ease-in-out'>
+              <span className='font-bold hidden lg:block'>03</span> Technology
+            </a>
+          </Link>
         </nav>
       </div>
       <HamburgerMenu />
