@@ -9,10 +9,10 @@ function App () {
   return (
     <div className='min-h-screen bg-fixed bg-cover'>
       <Nav />
-      <Route path='/' exact component={HomePage} />
-      <Route path='/destination' exact component={DestinationPage} />
-      <Route path='/crew' exact component={CrewPage} />
-      <Route path='/technology' exact component={TechPage} />
+      <Route path='/space-tourism-website/' exact component={HomePage} />
+      <Route path='/space-tourism-website/destination' exact component={DestinationPage} />
+      <Route path='/space-tourism-website/crew' exact component={CrewPage} />
+      <Route path='/space-tourism-website/technology' exact component={TechPage} />
     </div>
 
   )
