@@ -13,7 +13,7 @@ function HomePage () {
           </p>
         </div>
         <div className=' '>
-          <Link href='/destination'>
+          <Link href='/space-tourism-website/destination'>
             <a className='transition-shadow duration-300 hover:shadow-[0px_1px_0px_100px_rgba(255,255,255,0.15)] cursor-pointer relative flex items-center justify-center  mx-auto lg:mx-0 peer w-[150px] md:w-[242px] md:h-[242px] h-[150px] bg-white rounded-full font-["Bellefair"] text-[20px] md:text-[32px] text-darkBlue tracking-[1.25px] uppercase'>
               Explore
             </a>

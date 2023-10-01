@@ -34,10 +34,10 @@ function HamburgerMenu () {
           <div className='peer-checked:translate-x-0 translate-x-full transition duration-300 fixed inset-0 flex justify-end'>
             <div className='w-[calc(254px)] bg-[#ffffff0a] backdrop-blur-[40px]'>
               <div className='flex flex-col items-left gap-5 pt-[100px] pl-[32px] ml-auto'>
-                <NavLink to='/'><span className='font-bold'>00</span> Home</NavLink>
-                <NavLink to='/destination'><span className='font-bold'>01</span> Destination</NavLink>
-                <NavLink to='/crew'><span className='font-bold'>02</span> Crew</NavLink>
-                <NavLink to='/technology'><span className='font-bold'>03</span> Technology</NavLink>
+                <NavLink to='/space-tourism-website/'><span className='font-bold'>00</span> Home</NavLink>
+                <NavLink to='/space-tourism-website/destination'><span className='font-bold'>01</span> Destination</NavLink>
+                <NavLink to='/space-tourism-website/crew'><span className='font-bold'>02</span> Crew</NavLink>
+                <NavLink to='/space-tourism-website/technology'><span className='font-bold'>03</span> Technology</NavLink>
               </div>
 
             </div>
