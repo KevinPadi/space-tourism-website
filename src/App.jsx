@@ -7,7 +7,6 @@ import { Route } from 'wouter'
 
 function App () {
   return (
-    // con react wouter probá en hacer esto: https://chat.openai.com/c/7e3ecd95-1f76-4aae-bee0-c343590377ee (paso 2)
     <div className='min-h-screen bg-fixed bg-cover'>
       <Nav />
       <Route path='/' exact component={HomePage} />
