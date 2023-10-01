@@ -32,16 +32,16 @@ function Nav () {
         <nav className='h-full'>
           <ul className='flex gap-6 lg:gap-[48px] h-full align-middle'>
             <li className='hover:bg-red'>
-              <NavLink to='/'><span className='font-bold hidden lg:block'>00</span>Home</NavLink>
+              <NavLink to='/space-tourism-website//'><span className='font-bold hidden lg:block'>00</span>Home</NavLink>
             </li>
             <li>
-              <NavLink to='/destination'><span className='font-bold hidden lg:block'>01</span>Destination</NavLink>
+              <NavLink to='/space-tourism-website/destination'><span className='font-bold hidden lg:block'>01</span>Destination</NavLink>
             </li>
             <li>
-              <NavLink to='/crew'><span className='font-bold hidden lg:block'>02</span>Crew</NavLink>
+              <NavLink to='/space-tourism-website/crew'><span className='font-bold hidden lg:block'>02</span>Crew</NavLink>
             </li>
             <li>
-              <NavLink to='/technology'><span className='font-bold hidden lg:block'>03</span>Technology</NavLink>
+              <NavLink to='/space-tourism-website/technology'><span className='font-bold hidden lg:block'>03</span>Technology</NavLink>
             </li>
           </ul>
         </nav>
