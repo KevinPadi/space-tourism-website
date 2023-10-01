@@ -4,8 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 function TechPage () {
   const [selectedTech, setSelectedTech] = useState(data.technology[0])
-  const liClasses = 'text-white flex items-center justify-center w-[40px] md:w-[60px] lg:w-[80px] h-[40px] md:h-[60px] lg:h-[80px] bg-transparent border-[1px] border-white/50 rounded-full'
+  const liClasses = 'text-white flex items-center justify-center w-[40px] md:w-[60px] lg:w-[80px] h-[40px] md:h-[60px] lg:h-[80px] bg-transparent border-[1px] border-white/25 rounded-full hover:border-white/50 cursor-pointer'
   const liSelectedClasses = 'text-black flex items-center justify-center w-[40px] md:w-[60px] lg:w-[80px] h-[40px] md:h-[60px] lg:h-[80px] bg-white border-[1px] border-white/50 rounded-full'
+
   return (
     <main className='bg-bgTechMobile md:bg-bgTechTablet lg:bg-bgTechDesktop bg-cover'>
       <div className='flex flex-col-reverse lg:flex-row pb-10 xl:pb-0 justify-between lg:pl-[105px] xl:pl-[165px] md:pt-[162px] xl:pt-[212px] min-h-screen'>
