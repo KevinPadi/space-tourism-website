@@ -1,6 +1,6 @@
 import { React, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import data from '../../data.json'
+import data from '../data.json'
 
 function CrewPage () {
   const [selectedCrew, setSelectedCrew] = useState(data.crew[0])

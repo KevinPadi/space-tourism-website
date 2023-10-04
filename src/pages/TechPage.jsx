@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import data from '../../data.json'
+import data from '../data.json'
 import { motion, AnimatePresence } from 'framer-motion'
 
 function TechPage () {

@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
-import data from '../../data.json'
+import data from '../data.json'
 
 function DestinationPage () {
   const [selectedDestination, setSelectedDestination] = useState(data.destinations[0])
