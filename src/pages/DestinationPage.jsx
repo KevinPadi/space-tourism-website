@@ -1,9 +1,31 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import data from '../data.json'
+import moonImage from '../assets/destination/image-moon.webp'
+import marsImage from '../assets/destination/image-mars.webp'
+import europaImage from '../assets/destination/image-europa.webp'
+import titanImage from '../assets/destination/image-titan.webp'
 
 function DestinationPage () {
   const [selectedDestination, setSelectedDestination] = useState(data.destinations[0])
+  let selectedImage
+
+  switch (selectedDestination.name) {
+    case 'Moon':
+      selectedImage = moonImage
+      break
+    case 'Mars':
+      selectedImage = marsImage
+      break
+    case 'Europa':
+      selectedImage = europaImage
+      break
+    case 'Titan':
+      selectedImage = titanImage
+      break
+    default:
+      selectedImage = moonImage // Fallback image
+  }
 
   return (
     <main className='md:px-[39px] lg:px-[90px] xl:px-[167px] bg-bgDestinationMobile md:bg-bgDestinationTablet lg:bg-bgDestinationDesktop bg-fixed bg-cover min-h-screen'>
@@ -16,7 +38,7 @@ function DestinationPage () {
             <AnimatePresence mode='wait'>
               <motion.img
                 className='z-0 md:z-auto w-40 md:w-60 lg:w-auto h-auto'
-                src={selectedDestination.images.webp}
+                src={selectedImage}
                 alt='planet image'
                 key={selectedDestination ? selectedDestination.name : 'empty'}
                 easeInOut
