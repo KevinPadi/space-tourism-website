@@ -1,11 +1,37 @@
 import { useState } from 'react'
 import data from '../data.json'
 import { motion, AnimatePresence } from 'framer-motion'
+import launchVehicleDesk from '../assets/technology/image-launch-vehicle-portrait.jpg' // desktop
+import launchVehicleMobile from '../assets/technology/image-launch-vehicle-landscape.jpg' // mobile
+import spaceportDesk from '../assets/technology/image-spaceport-portrait.jpg' // desktop
+import spaceportMobile from '../assets/technology/image-spaceport-landscape.jpg' // mobile
+import spaceCapsuleDesk from '../assets/technology/image-space-capsule-portrait.jpg' // desktop
+import spaceCapsuleMobile from '../assets/technology/image-space-capsule-landscape.jpg' // mobile
 
 function TechPage () {
   const [selectedTech, setSelectedTech] = useState(data.technology[0])
   const liClasses = 'text-white flex items-center justify-center w-[40px] md:w-[60px] lg:w-[80px] h-[40px] md:h-[60px] lg:h-[80px] bg-transparent border-[1px] border-white/25 rounded-full hover:border-white/50 cursor-pointer'
   const liSelectedClasses = 'text-black flex items-center justify-center w-[40px] md:w-[60px] lg:w-[80px] h-[40px] md:h-[60px] lg:h-[80px] bg-white border-[1px] border-white/50 rounded-full'
+  let selectedImageDesk
+  let selectedImageMobile
+
+  switch (selectedTech.name) {
+    case 'Launch Vehicle':
+      selectedImageDesk = launchVehicleDesk
+      selectedImageMobile = launchVehicleMobile
+      break
+    case 'Spaceport':
+      selectedImageDesk = spaceportDesk
+      selectedImageMobile = spaceportMobile
+      break
+    case 'SpaceCapsule':
+      selectedImageDesk = spaceCapsuleDesk
+      selectedImageMobile = spaceCapsuleMobile
+      break
+    default:
+      selectedImageDesk = launchVehicleDesk // Fallback image
+      selectedImageMobile = launchVehicleMobile // Fallback image
+  }
 
   return (
     <main className='bg-bgTechMobile md:bg-bgTechTablet lg:bg-bgTechDesktop bg-cover'>
@@ -66,7 +92,7 @@ function TechPage () {
           <AnimatePresence mode='wait'>
             <motion.img
               className='hidden lg:block mr-0 ml-auto'
-              src={selectedTech.images.portrait}
+              src={selectedImageDesk}
               alt='tech image'
               key={selectedTech ? selectedTech.name : 'empty'}
               initial={{ x: -10, opacity: 0.1 }}
@@ -78,7 +104,7 @@ function TechPage () {
           <AnimatePresence mode='wait'>
             <motion.img
               className='visible lg:hidden w-full max-w-none mr-0 ml-auto'
-              src={selectedTech.images.landscape}
+              src={selectedImageMobile}
               alt='tech image'
               key={selectedTech ? selectedTech.name : 'empty'}
               initial={{ x: 10, opacity: 0.1 }}

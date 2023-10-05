@@ -1,9 +1,31 @@
 import { React, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import data from '../data.json'
+import douglasImage from '../assets/crew/image-douglas-hurley.webp'
+import markImage from '../assets/crew/image-mark-shuttleworth.webp'
+import victorImage from '../assets/crew/image-victor-glover.webp'
+import anoushehImage from '../assets/crew/image-anousheh-ansari.webp'
 
 function CrewPage () {
   const [selectedCrew, setSelectedCrew] = useState(data.crew[0])
+  let selectedImage
+
+  switch (selectedCrew.name) {
+    case 'Douglas Hurley':
+      selectedImage = douglasImage
+      break
+    case 'Mark Shuttleworth':
+      selectedImage = markImage
+      break
+    case 'Victor Glover':
+      selectedImage = victorImage
+      break
+    case 'Anousheh Ansari':
+      selectedImage = anoushehImage
+      break
+    default:
+      selectedImage = douglasImage // Fallback image
+  }
 
   return (
     <main className='md:px-[39px] lg:px-[90px] xl:px-[167px] bg-bgCrewMobile md:bg-bgCrewTablet lg:bg-bgCrewDesktop bg-fixed bg-cover min-h-screen'>
@@ -76,7 +98,9 @@ function CrewPage () {
         <div className='flex justify-center lg:items-end'>
           <div className='w-80 md:w-96 lg:w-auto flex justify-center'>
             <motion.img
-              className=' h-auto' src={selectedCrew.images.webp} alt='crew image'
+              className=' h-auto'
+              src={selectedImage}
+              alt='crew image'
               key={selectedCrew ? selectedCrew.name : 'empty'}
               initial={{ x: 0, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
